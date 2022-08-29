@@ -11,12 +11,12 @@ export class ApiServiceService {
 
   public apiData: any = [];
 
-  FetchApiData() {
-    fetch('https://fakestoreapi.com/products')
-      .then((res) => res.json())
-      .then((res) => (this.apiData = res));
-    return this.apiData;
-  }
+  // FetchApiData() {
+  //   fetch('https://fakestoreapi.com/products')
+  //     .then((res) => res.json())
+  //     .then((res) => (this.apiData = res));y
+  //   return this.apiData;
+  // }
 
   getProduct() {
     return this.http.get<any>('https://fakestoreapi.com/products').pipe(
@@ -26,7 +26,7 @@ export class ApiServiceService {
     );
   }
 
-  getApiData() {
-    // return this.apiData;
-  }
+  // getApiData() {
+  //   // return this.apiData;
+  // }
 }

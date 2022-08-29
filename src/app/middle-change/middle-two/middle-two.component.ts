@@ -15,11 +15,6 @@ export class MiddleTwoComponent implements OnInit {
     this.Api.getProduct().subscribe((res) => {
       this.productList = res;
       console.log(this.productList)
-      // this.productList.forEach((a: any) => {
-      //   Object.assign(a, { quantity: 1, total: a.price });
-
-      //   console.log(this.productList);
-      // });
     });
   }
 
