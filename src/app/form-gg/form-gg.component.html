@@ -1,0 +1,97 @@
+<div class="formConatiner">
+  <h1>Add Event</h1>
+
+  <div class="formFull">
+    <div class="formHolder">
+      <form [formGroup]="eventForm" class="example-form" (ngsubmit)="getData()">
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label
+            ><mat-icon fontIcon="person"></mat-icon> Event Name</mat-label
+          >
+          <input
+            formControlName="eventNme"
+            name="eventName"
+            matInput
+            placeholder="Ex. ThanksGiving"
+            value=""
+          />
+          <!-- [(ngModel)]="inputData.eventName" -->
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label
+            ><mat-icon fontIcon="book"></mat-icon> Description</mat-label
+          >
+          <input formControlName="descNme" name="descName" matInput />
+          <!-- [(ngModel)]="inputData.descName" -->
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label
+            ><mat-icon fontIcon="location_on"></mat-icon> Address</mat-label
+          >
+          <input formControlName="addNme" name="addName" matInput matInput />
+          <!-- [(ngModel)]="inputData.addName" -->
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label
+            ><mat-icon fontIcon="location_on"></mat-icon> Contact
+            person</mat-label
+          >
+          <input formControlName="contNme" name="contName" matInput matInput />
+          <!-- [(ngModel)]="inputData.contName" -->
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label
+            ><mat-icon fontIcon="location_on"></mat-icon> Contact email and
+            phone</mat-label
+          >
+          <input formControlName="mailNme" name="mailName" matInput matInput />
+          <!-- [(ngModel)]="inputData.mailName" -->
+        </mat-form-field>
+
+        <div class="btnHolder">
+          <button mat-stroked-button color="warn">Cancel</button>
+          <button
+            mat-raised-button
+            type="submit"
+            (click)="getData()"
+            color="primary"
+          >
+            Request to add Event
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- <div class="formHolder formHolder2">
+      <div
+        *ngFor="let eventData of eventDataes; let i = index"
+        class="resultContainer"
+      >
+        <div class="resultDivs">
+          <p>Event :</p>
+          <p>{{ eventDataes[i].eventNme }}</p>
+        </div>
+
+        <div class="resultDivs">
+          <p>Description :</p>
+          <p>{{ eventDataes[i].descNme }}</p>
+        </div>
+        <div class="resultDivs">
+          <p>Address :</p>
+          <p>{{ eventDataes[i].addNme }}</p>
+        </div>
+        <div class="resultDivs">
+          <p>Contact :</p>
+          <p>{{ eventDataes[i].contNme }}</p>
+        </div>
+        <div class="resultDivs">
+          <p>Email :</p>
+          <p>{{ eventDataes[i].mailNme }}</p>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>

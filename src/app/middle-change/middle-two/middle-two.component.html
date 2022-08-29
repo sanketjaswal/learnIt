@@ -1,0 +1,68 @@
+<!-- <div class="middle_navs">
+  <div class="formDataContaniner">
+    <h1>API Data</h1>
+    <div class="formHolder">
+      <div
+        *ngFor="let hero of ApiComingData; let i = index"
+        class="resultContainer"
+      >
+        <div class="eventCross"></div>
+        <div class="resultDivs">
+          <p>Title :</p>
+          <p>{{ ApiComingData[i].title }}</p>
+        </div> -->
+
+<!-- <div class="resultDivs">
+        <p>Description :</p>
+        <p>{{ ApiComingData[i].description }}</p>
+      </div> -->
+<!-- <div class="resultDivs">
+        <p>Category :</p>
+        <p>{{ ApiComingData[i].category }}</p>
+      </div> -->
+<!-- <div class="resultDivs">
+        <p>Price :</p>
+        <p>{{ ApiComingData[i].price }}</p>
+      </div> -->
+<!-- <div class="resultDivs">
+        <p>Email :</p>
+        <p>{{ ApiComingData[i].mailNme }}</p>
+      </div> -->
+<!-- <div
+          class="apiPhoto"
+          > -->
+<!-- [style.background-image]="{{ ApiComingData[i].image }}" -->
+<!-- <img src="{{ ApiComingData[i].image }}">
+          <p>{{ ApiComingData[i].rating.rate } }</p>
+          <p>{{ ApiComingData[i].rating.count } }</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="formDataContaniner">
+  <h1>API Data</h1>
+  <div class="formHolder">
+    <ng-container *ngFor="let item of productList">
+      <div class="resultContainer">
+        <img src="{{ item.image }}" class="apiPhoto" alt="" />
+        <h4>{{ item.title }}</h4>
+        <p><strong>$:</strong>{{ item.price }}</p>
+        <div class="rater">
+          <div class="pointStar">
+            <p>{{ item.rating.rate }}</p>
+            <mat-icon class="iconStar" fontIcon="star"></mat-icon>
+          </div>
+          <p>|</p>
+          <p>{{ item.rating.count }}</p>
+        </div>
+        <div class="heartContainer">
+         <mat-icon fontIcon="favorite_border"></mat-icon>
+         </div>
+        <!-- <button class="btn btn-secondary" (click)=addtocart(item)>Add to cart</button> -->
+      </div>
+    </ng-container>
+  </div>
+  <h3>More..</h3>
+</div>

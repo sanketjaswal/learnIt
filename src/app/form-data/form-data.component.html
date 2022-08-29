@@ -1,0 +1,32 @@
+<div class="formDataContaniner">
+  <!-- <a routerLink="/formData"></a> -->
+  <div class="formHolder">
+    <div
+      *ngFor="let hero of EventComingData; let i = index"
+      class="resultContainer"
+    >
+      <div class="eventCross" (click)= "deleteDataTab(i)"><mat-icon fontIcon="delete"></mat-icon></div>
+      <div class="resultDivs">
+        <p>Event :</p>
+        <p>{{ EventComingData[i].eventNme }}</p>
+      </div>
+
+      <div class="resultDivs">
+        <p>Description :</p>
+        <p>{{ EventComingData[i].descNme }}</p>
+      </div>
+      <div class="resultDivs">
+        <p>Address :</p>
+        <p>{{ EventComingData[i].addNme }}</p>
+      </div>
+      <div class="resultDivs">
+        <p>Contact :</p>
+        <p>{{ EventComingData[i].contNme }}</p>
+      </div>
+      <div class="resultDivs">
+        <p>Email :</p>
+        <p>{{ EventComingData[i].mailNme }}</p>
+      </div>
+    </div>
+  </div>
+</div>

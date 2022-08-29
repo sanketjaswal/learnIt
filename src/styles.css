@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.navs{
+    background-color: azure;
+    border: 1px solid grey;
+    padding-inline: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    transition: 1s;
+}
+
+.navs a{
+    margin: 0;
+    text-decoration: none;
+        color: black;
+
+}
+
+.navs h1{
+    margin: 0;
+}
+
+.navs:hover{
+    background-color: rgb(99, 235, 81);
+    color: white;
+    transition: .1s;
+}
+
+.navs:active{
+    background-color: gold;
+    color: white;
+        box-shadow: 0 0 0px grey;
+
+}
+
+.middle_navs{
+    width: 100%;
+    min-height:73%;
+    max-height: max-content;
+    display: flex;
+    color:white;
+    justify-content: center;
+    align-items: center;
+
+}
+html, body { height: 100%; }
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
