@@ -1,1 +1,71 @@
-<div class="middle_navs"><h1>Purple</h1></div>
+<div class="formConatiner">
+  <h1>Add API</h1>
+
+  <div class="formFull">
+    <div class="formHolder">
+      <form [formGroup]="apiForm" class="example-form" (ngsubmit)="getData()">
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label><mat-icon fontIcon="person"></mat-icon> Title </mat-label>
+          <input
+            formControlName="apiTitle"
+            name="eventName"
+            matInput
+            placeholder="New Sale Item"
+            value=""
+          />
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label><mat-icon fontIcon=" money"></mat-icon> Price</mat-label>
+          <input formControlName="apiPrice" name="descName" matInput />
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label
+            ><mat-icon fontIcon="book"></mat-icon> Description</mat-label
+          >
+          <input formControlName="apiDesc" name="descName" matInput />
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label
+            ><mat-icon fontIcon="category"></mat-icon> Category</mat-label
+          >
+          <input
+            formControlName="ApiCategory"
+            name="addName"
+            matInput
+            matInput
+          />
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label><mat-icon fontIcon="image"></mat-icon> Image</mat-label>
+          <input formControlName="apiImage" name="contName" matInput matInput />
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label><mat-icon fontIcon="star"></mat-icon> Rate</mat-label>
+          <input formControlName="apiRate" name="mailName" matInput matInput />
+        </mat-form-field>
+
+        <mat-form-field class="formSlots" appearance="fill">
+          <mat-label><mat-icon fontIcon="numbers"></mat-icon> Count</mat-label>
+          <input formControlName="apiCount" matInput matInput />
+        </mat-form-field>
+
+        <div class="btnHolder">
+          <button mat-stroked-button (click)="cancelData()" color="warn">Cancel</button>
+          <button
+            mat-raised-button
+            type="submit"
+            (click)="getData()"
+            color="primary"
+          >
+            Add data to API
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -26,7 +26,13 @@ export class ApiServiceService {
     );
   }
 
-  // getApiData() {
-  //   // return this.apiData;
-  // }
+  private apiInstance: any = {};
+  public apiFormData: any = [];
+
+  setApiData(data: any) {
+    this.apiInstance = data;
+    this.apiFormData.push(this.apiInstance);
+    console.log(this.apiFormData);
+  }
+
 }

@@ -9,12 +9,12 @@ import { ApiServiceService } from 'src/app/api-service.service';
 export class MiddleTwoComponent implements OnInit {
   constructor(private Api: ApiServiceService) {}
 
-  productList:any;
+  productList: any;
   ngOnInit(): void {
     // this.callAPI();
     this.Api.getProduct().subscribe((res) => {
       this.productList = res;
-      console.log(this.productList)
+      console.log(this.productList);
     });
   }
 
@@ -23,5 +23,9 @@ export class MiddleTwoComponent implements OnInit {
   callAPI() {
     // this.ApiComingData = this.ApiData.FetchApiData();
     console.log(this.ApiComingData[0]);
+  }
+
+  favClick(DataIndex: any) {
+    console.log(this.productList[DataIndex]);
   }
 }

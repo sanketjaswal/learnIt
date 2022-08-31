@@ -1,50 +1,11 @@
-<!-- <div class="middle_navs">
-  <div class="formDataContaniner">
-    <h1>API Data</h1>
-    <div class="formHolder">
-      <div
-        *ngFor="let hero of ApiComingData; let i = index"
-        class="resultContainer"
-      >
-        <div class="eventCross"></div>
-        <div class="resultDivs">
-          <p>Title :</p>
-          <p>{{ ApiComingData[i].title }}</p>
-        </div> -->
-
-<!-- <div class="resultDivs">
-        <p>Description :</p>
-        <p>{{ ApiComingData[i].description }}</p>
-      </div> -->
-<!-- <div class="resultDivs">
-        <p>Category :</p>
-        <p>{{ ApiComingData[i].category }}</p>
-      </div> -->
-<!-- <div class="resultDivs">
-        <p>Price :</p>
-        <p>{{ ApiComingData[i].price }}</p>
-      </div> -->
-<!-- <div class="resultDivs">
-        <p>Email :</p>
-        <p>{{ ApiComingData[i].mailNme }}</p>
-      </div> -->
-<!-- <div
-          class="apiPhoto"
-          > -->
-<!-- [style.background-image]="{{ ApiComingData[i].image }}" -->
-<!-- <img src="{{ ApiComingData[i].image }}">
-          <p>{{ ApiComingData[i].rating.rate } }</p>
-          <p>{{ ApiComingData[i].rating.count } }</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <div class="formDataContaniner">
-  <h1>API Data</h1>
+  <div class="shopNav">
+    <button mat-stroked-button color="warn"><mat-icon fontIcon="remove_shopping_cart"></mat-icon> No kart</button>
+    <h1>API Shop</h1>
+    <button mat-raised-button color="primary"> <mat-icon fontIcon="shopping_cart"></mat-icon> Cart</button>
+  </div>
   <div class="formHolder">
-    <ng-container *ngFor="let item of productList">
+    <ng-container *ngFor="let item of productList; let i = index">
       <div class="resultContainer">
         <img src="{{ item.image }}" class="apiPhoto" alt="" />
         <h4>{{ item.title }}</h4>
@@ -57,9 +18,9 @@
           <p>|</p>
           <p>{{ item.rating.count }}</p>
         </div>
-        <div class="heartContainer">
-         <mat-icon fontIcon="favorite_border"></mat-icon>
-         </div>
+        <div class="heartContainer" (click)="favClick(i)">
+          <mat-icon fontIcon="favorite_border"></mat-icon>
+        </div>
         <!-- <button class="btn btn-secondary" (click)=addtocart(item)>Add to cart</button> -->
       </div>
     </ng-container>
