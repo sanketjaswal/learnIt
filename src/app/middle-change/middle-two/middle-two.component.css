@@ -31,17 +31,13 @@ h1 {
   width: 100%;
   min-height: 73vh;
   max-height: max-content;
-  /* background-color: #f44336; */
 }
 
 .formHolder {
-  /* background-color: rgb(165, 42, 42); */
   width: 90%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
-
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   padding-block: 35px;
@@ -51,10 +47,8 @@ h1 {
 .resultContainer {
   width: 15%;
   overflow: hidden;
-  /* height: 100%; */
   border-radius: 10px;
   box-shadow: 0 0 5px transparent;
-  /* border: 1px solid grey; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,7 +118,6 @@ h1 {
 }
 
 .resultContainer:hover {
-  /* background-color: rgb(251, 239, 225); */
   box-shadow: 0 0 10px black;
   transform: scale(1.03);
   transition: 0.3s;
@@ -139,14 +132,13 @@ h1 {
   margin: 0;
   width: 90%;
   text-align: center;
-  /* background-color: #6874b9; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 600;
 }
 
-.resultContainer p {
+ p {
   margin: 0;
 }
 
@@ -172,10 +164,6 @@ h1 {
   bottom: 70px;
   left: 30px;
   padding-inline: 2px;
-}
-
-.rater p {
-  margin: 0;
 }
 
 .apiPhoto {
@@ -245,7 +233,7 @@ h1 {
   opacity: 1;
 }
 
-.cartContainer h3 {
+h3 {
   margin: 0 8px;
   font-weight: 500;
 }
@@ -255,9 +243,7 @@ h1 {
   height: 100%;
   position: absolute;
   top: 25%;
-  /* background-color: #ff9992; */
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
@@ -275,8 +261,7 @@ h1 {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
-    z-index: 0;
-
+  z-index: 0;
 }
 
 .favContainer {
@@ -304,7 +289,6 @@ h1 {
   height: 90%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: space-around;
   background-color: white;
 }
@@ -328,10 +312,4 @@ h1 {
 .favRemoveDiv:active {
   background-color: rgb(209, 209, 209);
   transform: scale(0.99);
-}
-
-
-.favRemoveDiv h3 {
-  margin: 0 8px;
-  font-weight: 500;
 }
