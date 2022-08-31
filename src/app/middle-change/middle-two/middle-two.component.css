@@ -9,8 +9,7 @@ h1 {
   font-size: 40px;
 }
 
-
-.shopNav{
+.shopNav {
   width: 100%;
   height: auto;
   background-color: #e7e7e7;
@@ -19,15 +18,14 @@ h1 {
   justify-content: space-around;
 }
 
-.shopNav button{
+.shopNav button {
   padding: 5px;
   height: 80%;
 }
 
-
 .formDataContaniner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -42,6 +40,7 @@ h1 {
   height: auto;
   display: flex;
   flex-wrap: wrap;
+
   /* flex-direction: column; */
   justify-content: center;
   align-items: center;
@@ -51,6 +50,7 @@ h1 {
 
 .resultContainer {
   width: 15%;
+  overflow: hidden;
   /* height: 100%; */
   border-radius: 10px;
   box-shadow: 0 0 5px transparent;
@@ -126,8 +126,8 @@ h1 {
 .resultContainer:hover {
   /* background-color: rgb(251, 239, 225); */
   box-shadow: 0 0 10px black;
-  transform: scale(1.05);
-  transition: 0.5s;
+  transform: scale(1.03);
+  transition: 0.3s;
 }
 
 .resultContainer:hover .resultDivs {
@@ -156,11 +156,10 @@ h1 {
   color: cadetblue;
 }
 
-.pointStar{
+.pointStar {
   display: flex;
   justify-content: center;
 }
-
 
 .rater {
   background-color: #f1f1f1cf;
@@ -187,18 +186,152 @@ h1 {
   background-size: contain;
 }
 
-.heartContainer{
+.heartContainer {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
   color: black;
-  transform: scale(.8);
+  transform: scale(0.9);
   background-color: transparent;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.heartContainer:hover{
+.heartContainer:hover {
   color: red;
   transform: scale(1);
-  transition: .3s;
+  transition: 0.3s;
+}
+
+.resultContainer:hover .heartContainer {
+  opacity: 1;
+}
+
+.cartContainer {
+  bottom: 43px;
+  position: absolute;
+  width: 100%;
+  height: 53px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  user-select: none;
+}
+
+.cartDiv {
+  width: 80%;
+  height: 60%;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartDiv:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.cartDiv:active {
+  background-color: rgb(209, 209, 209);
+  transform: scale(0.99);
+}
+
+.resultContainer:hover .cartContainer {
+  opacity: 1;
+}
+
+.cartContainer h3 {
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+.favPage {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 25%;
+  /* background-color: #ff9992; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  z-index: -1;
+}
+
+.favPage2 {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 25%;
+  opacity: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+    z-index: 0;
+
+}
+
+.favContainer {
+  width: 30%;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+  background-color: white;
+}
+
+.favPhoto {
+  width: 150px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0 5px;
+}
+
+.favDetails {
+  width: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+  background-color: white;
+}
+
+.favRemoveDiv {
+  width: 80%;
+  height: 20%;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favRemoveDiv:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.favRemoveDiv:active {
+  background-color: rgb(209, 209, 209);
+  transform: scale(0.99);
+}
+
+
+.favRemoveDiv h3 {
+  margin: 0 8px;
+  font-weight: 500;
 }

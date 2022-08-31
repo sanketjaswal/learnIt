@@ -1,15 +1,23 @@
 <div class="formDataContaniner">
+
   <div class="shopNav">
-    <button mat-stroked-button color="warn"><mat-icon fontIcon="remove_shopping_cart"></mat-icon> No kart</button>
+    <button mat-stroked-button color="warn" (click)="hideCart()">
+      <mat-icon fontIcon="remove_shopping_cart"></mat-icon> Hide kart
+    </button>
     <h1>API Shop</h1>
-    <button mat-raised-button color="primary"> <mat-icon fontIcon="shopping_cart"></mat-icon> Cart</button>
+    <!-- <a href="cart"> -->
+      <button mat-raised-button color="primary" (click)="showCart()">
+        <mat-icon fontIcon="shopping_cart"></mat-icon> Show Cart
+      </button>
+    <!-- </a> -->
   </div>
+
   <div class="formHolder">
     <ng-container *ngFor="let item of productList; let i = index">
       <div class="resultContainer">
         <img src="{{ item.image }}" class="apiPhoto" alt="" />
         <h4>{{ item.title }}</h4>
-        <p><strong>$:</strong>{{ item.price }}</p>
+        <p><strong>$ </strong>{{ item.price }}</p>
         <div class="rater">
           <div class="pointStar">
             <p>{{ item.rating.rate }}</p>
@@ -18,12 +26,56 @@
           <p>|</p>
           <p>{{ item.rating.count }}</p>
         </div>
-        <div class="heartContainer" (click)="favClick(i)">
+        <div class="heartContainer">
           <mat-icon fontIcon="favorite_border"></mat-icon>
         </div>
-        <!-- <button class="btn btn-secondary" (click)=addtocart(item)>Add to cart</button> -->
+        <div class="cartContainer">
+          <div class="cartDiv" (click)="favClick(i)">
+            <mat-icon fontIcon="add_shopping_cart"></mat-icon>
+            <h3>Add to Cart</h3>
+          </div>
+        </div>
       </div>
     </ng-container>
   </div>
+
   <h3>More..</h3>
+  
+  <!-- <a name="cart"></a> -->
+  <h1>Cart</h1>
+  <div class="favPage" (click)="setActiveClass()">
+    <ng-container *ngFor="let item of favArray; let i = index">
+      <div class="favContainer">
+        <img src="{{ item.image }}" class="favPhoto" alt="" />
+        <div class="favDetails">
+          <h2>{{ item.category }}</h2>
+          <h4>{{ item.title }}</h4>
+          <div
+            style="
+              width: 80%;
+              justify-content: space-evenly;
+              align-items: center;
+              background-color: white;
+              display: flex;
+            "
+          >
+            <p><strong>$ </strong>{{ item.price }}</p>
+            <p>Quantity : <strong>1</strong></p>
+          </div>
+          <div class="favRemoveDiv" (click)="removeFav(i)">
+            <mat-icon fontIcon="remove_shopping_cart"></mat-icon>
+            <h3>Remove from Cart</h3>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <!-- <div class="favNav">
+    <button mat-stroked-button color="warn" (click)="hideCart()">
+      <mat-icon fontIcon="remove_shopping_cart"></mat-icon> Hide kart
+    </button>
+      <button mat-raised-button color="primary" (click)="showCart()">
+        <mat-icon fontIcon="shopping_cart"></mat-icon> Show Cart
+      </button>
+  </div> -->
+  </div>
 </div>
