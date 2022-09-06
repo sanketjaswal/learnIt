@@ -1,5 +1,8 @@
+import { CartDialogComponent } from './../../cart-dialog/cart-dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from 'src/app/api-service.service';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+//  import { A11yModule } from '@angular/cdk/a11y'; 
 
 @Component({
   selector: 'app-middle-two',
@@ -7,7 +10,7 @@ import { ApiServiceService } from 'src/app/api-service.service';
   styleUrls: ['./middle-two.component.css'],
 })
 export class MiddleTwoComponent implements OnInit {
-  constructor(private Api: ApiServiceService) {}
+  constructor(private Api: ApiServiceService, private dialog: MatDialog) {}
 
   productList: any;
   ngOnInit(): void {
@@ -43,12 +46,27 @@ export class MiddleTwoComponent implements OnInit {
     }
   }
 
-  showCart() {
-    document.getElementsByClassName('favPage')[0].className = 'favPage2';
+  // showCart() {
+  //   document.getElementsByClassName('favPage')[0].className = 'favPage2';
+  // }
+
+  // hideCart() {
+  //   document.getElementsByClassName('favPage2')[0].className = 'favPage';
+  // }
+
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    // dialogConfig.data =(
+    //   this.favArray);
+
+    this.dialog.open(
+      CartDialogComponent,
+      dialogConfig
+    );
+    this.Api.SetapiCartData(this.favArray);
   }
-
-  hideCart(){
-    document.getElementsByClassName('favPage2')[0].className = 'favPage';
-
-  };
 }

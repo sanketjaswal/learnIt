@@ -1,12 +1,12 @@
 <div class="formDataContaniner">
 
   <div class="shopNav">
-    <button mat-stroked-button color="warn" (click)="hideCart()">
+    <button mat-stroked-button color="warn">
       <mat-icon fontIcon="remove_shopping_cart"></mat-icon> Hide kart
     </button>
     <h1>API Shop</h1>
     <!-- <a href="cart"> -->
-      <button mat-raised-button color="primary" (click)="showCart()">
+      <button mat-raised-button color="primary" (click)="openDialog()">
         <mat-icon fontIcon="shopping_cart"></mat-icon> Show Cart
       </button>
     <!-- </a> -->
@@ -42,8 +42,9 @@
   <h3>More..</h3>
   
   <!-- <a name="cart"></a> -->
-  <div class="favPage" (click)="setActiveClass()">
-    <!-- <h1>Cart</h1> -->
+  <!-- <div class="favPage" (clic
+  k)="setActiveClass()">
+    <h1>Cart</h1>
     <ng-container *ngFor="let item of favArray; let i = index">
       <div class="favContainer">
         <img src="{{ item.image }}" class="favPhoto" alt="" />
@@ -69,5 +70,5 @@
         </div>
       </div>
     </ng-container>
-  </div>
+  </div> -->
 </div>

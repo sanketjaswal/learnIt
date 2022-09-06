@@ -21,6 +21,8 @@ import { FormDataComponent } from './form-data/form-data.component';
 import { FormDataNavComponent } from './Nav/form-data-nav/form-data-nav.component';
 import { HttpClientModule } from '@angular/common/http';
 // import { FormControl, FormGroup } from '@angular/forms';
+ import { MatDialogModule } from '@angular/material/dialog';
+import { CartDialogComponent } from './cart-dialog/cart-dialog.component'; 
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormGgComponent,
     FormDataComponent,
     FormDataNavComponent,
+    CartDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
   ],
   providers: [TransferService],
   bootstrap: [AppComponent],

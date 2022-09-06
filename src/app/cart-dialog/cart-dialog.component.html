@@ -1,0 +1,30 @@
+<div class="CartDialogContainer">
+    <h1>Cart</h1>
+    <div class="favPage">
+    <div *ngFor="let item of favArray; let i = index">
+      <div class="favContainer">
+        <img src="{{ item.image }}" class="favPhoto" alt="" />
+        <div class="favDetails">
+          <h2>{{ item.category }}</h2>
+          <h4>{{ item.title }}</h4>
+          <div
+            style="
+              width: 80%;
+              justify-content: space-evenly;
+              align-items: center;
+              background-color: white;
+              display: flex;
+            "
+          >
+            <p><strong>$ </strong>{{ item.price }}</p>
+            <p>Quantity : <strong>1</strong></p>
+          </div>
+          <div class="favRemoveDiv" >
+          <mat-icon fontIcon="remove_shopping_cart"></mat-icon>
+            <h3>Remove from Cart</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

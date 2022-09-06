@@ -1,0 +1,91 @@
+.CartDialogContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+  flex-direction: column;
+  width: 50vw;
+  min-height: 73vh;
+  max-height: max-content;
+}
+
+h3 {
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+.favPage {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /* opacity: 0; */
+  /* z-index: -1; */
+}
+
+.favPage2 {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 25%;
+  opacity: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  z-index: 0;
+}
+
+.favContainer {
+  width: 30%;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+  background-color: white;
+}
+
+.favPhoto {
+  width: 150px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0 5px;
+}
+
+.favDetails {
+  width: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.favRemoveDiv {
+  width: 80%;
+  height: 20%;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favRemoveDiv:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.favRemoveDiv:active {
+  background-color: rgb(209, 209, 209);
+  transform: scale(0.99);
+}

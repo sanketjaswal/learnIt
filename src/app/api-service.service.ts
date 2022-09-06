@@ -35,4 +35,14 @@ export class ApiServiceService {
     console.log(this.apiFormData);
   }
 
+  public favarray: any;
+
+  SetapiCartData(data: any) {
+    this.favarray = (data);
+    console.log(this.favarray);
+  }
+
+  GetapiCartData(){
+    return this.favarray;
+  };
 }
